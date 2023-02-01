@@ -1,0 +1,23 @@
+python train_xent_tri.py -s veri -t vehicleID \
+--height 256 \
+--width 256 \
+--optim adam \
+--lr 0.00035 \
+--max-epoch 150 \
+--stepsize 30 60 90 120 150 \
+--train-batch-size 64 \
+--test-batch-size 10 \
+-a resnet50 \
+--save-dir log/veri-single-channel-global-2 \
+--gpu-devices 0 \
+--train-sampler RandomIdentitySampler \
+--eval-freq 1 \
+--random-erase \
+--label-smooth \
+--attn \
+--num-prototypes 2 \
+--stride3 2 \
+--discard 1 \
+--channel \
+--evaluate \
+--load-weights log/resnet50-baseline-veri-single-channel-2/model.pth.tar-90

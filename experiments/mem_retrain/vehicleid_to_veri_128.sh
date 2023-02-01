@@ -1,0 +1,16 @@
+python train_xent_tri_mem_retrain.py -s veri -t veri \
+--height 128 \
+--width 256 \
+--optim amsgrad \
+--lr 0.000003 \
+--max-epoch 10 \
+--stepsize 60 80 \
+--train-batch-size 128 \
+--test-batch-size 100 \
+-a resnet50 \
+--eval-freq 1 \
+--save-dir log/resnet50-baseline-vehicleid-to-veri-mem-retrain-128 \
+--gpu-devices 0 \
+--train-sampler rgn \
+--random-erase \
+--load-weights log/resnet50-baseline-vehicleid-mem/model.pth.tar-60 \

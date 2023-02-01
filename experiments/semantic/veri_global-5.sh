@@ -1,0 +1,22 @@
+python train_xent_tri.py -s veri -t veri \
+--height 256 \
+--width 256 \
+--optim adam \
+--lr 0.00035 \
+--max-epoch 90 \
+--stepsize 30 60 90 120 150 \
+--train-batch-size 64 \
+--test-batch-size 100 \
+-a resnet50 \
+--save-dir log/veri-channel-global-5 \
+--gpu-devices 0 \
+--train-sampler RandomIdentitySampler \
+--eval-freq 1 \
+--random-erase \
+--label-smooth \
+--attn \
+--num-prototypes 5 \
+--discard 1 \
+--stride3 2 \
+--has-global \
+--channel

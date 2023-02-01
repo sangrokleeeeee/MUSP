@@ -1,0 +1,18 @@
+python train_xent_tri.py -s vehicleID -t vehicleID \
+--height 256 \
+--width 256 \
+--optim adam \
+--lr 0.00035 \
+--max-epoch 150 \
+--stepsize 30 60 90 120 150 \
+--train-batch-size 64 \
+--test-batch-size 100 \
+-a resnet50 \
+--save-dir log/resnet50-baseline-vehicleID \
+--gpu-devices 1 \
+--train-sampler RandomIdentitySampler \
+--random-erase \
+--label-smooth \
+--stride3 2 \
+--evaluate \
+--load-weights log/resnet50-baseline-vehicleID/model.pth.tar-90

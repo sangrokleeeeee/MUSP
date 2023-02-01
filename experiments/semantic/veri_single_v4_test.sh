@@ -1,0 +1,16 @@
+python train_xent_tri.py -s veri -t veri \
+--height 384 \
+--width 384 \
+--optim amsgrad \
+--lr 0.0003 \
+--max-epoch 60 \
+--stepsize 20 40 \
+--train-batch-size 64 \
+--test-batch-size 10 \
+-a resnet50 \
+--save-dir log/resnet50-baseline-single-v4 \
+--gpu-devices 1 \
+--train-sampler RandomIdentitySampler \
+--random-erase \
+--evaluate \
+--load-weights log/resnet50-baseline-veri-single-v4/model.pth.tar-1
