@@ -1,6 +1,6 @@
 # [MUSP]()
 ## Introduction
-Official implementation of MUSP(Multi-attention-based soft partition network for vehicle re-identification)
+Official implementation of [MUSP(Multi-attention-based soft partition network for vehicle re-identification)](https://academic.oup.com/jcde/advance-article/doi/10.1093/jcde/qwad014/7055945?searchresult=1)
 This code is based on the [repository](https://github.com/Jakel21/vehicle-ReID).  
 
 ## Installation
